@@ -353,4 +353,4 @@ client.on('message', zaid => {
 //================================================================================
 
 
-client.login(process.env.BOT_TOKEN);
+client.login("process.env.BOT_TOKEN");
