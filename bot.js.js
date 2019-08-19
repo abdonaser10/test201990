@@ -4,6 +4,26 @@ var prefix = "$"
 
 
 
+client.on('ready',  () => {
+    console.log('تم تشغيل البوت   ');
+    console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
+    console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
+    console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
+  });
+
+
+
+//================================================================================
+//================================================================================
+
+//كود لظهار صورت شخص 
+
+client.on('message', message => {
+    var  user = message.mentions.users.first() || message.author;
+if (message.content.startsWith("$avatar")) {
+message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
+}
+});
 
 
 
