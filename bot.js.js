@@ -381,4 +381,4 @@ client.on('message', zaid => {
 //================================================================================
 
 
-client.login("NjAxMjQ4MTkxNDU5MDk4NjI2.XVqn4A.afCIFjwKNtawWQ5ddr3XjIIfFaw");
+client.login(process.env.BOT_TOKEN);
