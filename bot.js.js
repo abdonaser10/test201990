@@ -4,34 +4,6 @@ var prefix = "$"
 
 
 
-//الاوامر حق تقفيل الشات و فتح الشات 
-
-client.on('message',zaid => {
-   if(zaid.content === prefix + "closechat") {
-   if(!zaid.channel.guild) return zaid.channel.send('**This command is only done on servers**');
-   if(!zaid.member.hasPermission('MANAGE_MESSAGES')) return zaid.channel.send('**:x: - No Permissions ! **');
-    zaid.channel.overwritePermissions(zaid.guild.id, {
-    SEND_MESSAGES: false
-    }).then(() => {
-    zaid.channel.send("**:white_check_mark: | Channel Closed :lock:**")
-});
-   }
-   if(zaid.content === prefix + "openchat") {
-   if(!zaid.channel.guild) return zaid.channel.send('**This command is only done on servers**');
-   if(!zaid.member.hasPermission('MANAGE_MESSAGES')) return zaid.channel.send(**:x: - No Permissions ! **');
-    zaid.channel.overwritePermissions(zaid.guild.id, {
-    SEND_MESSAGES: true
-    }).then(() => {
-    zaid.channel.send("**:white_check_mark: | Channel Opened :unlock:**")
- });
- }      
-});
-
-
-//================================================================================
-//================================================================================
-
-
 
 
 
